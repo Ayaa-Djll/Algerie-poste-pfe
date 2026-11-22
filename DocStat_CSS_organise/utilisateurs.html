@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utilisateurs - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/utilisateurs.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <div class="titre"><div><h1>Utilisateurs et rôles</h1><p>Qui peut voir et faire quoi</p></div><div class="groupe"><button class="btn "><i data-i="plus"></i>Ajouter un utilisateur</button></div></div>
+    <div class="ligne"><div class="carte"><b>Administrateur</b><br><span style="color:#4a5b6c">Tout : bureaux, utilisateurs, imports</span></div><div class="carte"><b>Directeur</b><br><span style="color:#4a5b6c">Consultation des statistiques et des fichiers</span></div><div class="carte"><b>Analyste</b><br><span style="color:#4a5b6c">Statistiques, import et export</span></div><div class="carte"><b>Agent de bureau</b><br><span style="color:#4a5b6c">Son bureau uniquement</span></div></div>
+    <div class="carte"><h2>Nouvel utilisateur</h2><div class="filtres">
+      <label>Nom <input value="Karim B."></label><label>E-mail <input value="karim@exemple.dz"></label>
+      <label>Rôle <select><option>Agent de bureau</option></select></label><label>Bureau <select><option>MEFTAH</option></select></label>
+      <button class="btn"><i data-i="plus"></i>Créer</button></div></div>
+    <div class="carte"><div class="defile"><table><tr><th>Nom</th><th>E-mail</th><th>Rôle</th><th>Bureau</th><th>Actions</th></tr>
+      <tr><td>Amina K.</td><td>amina@exemple.dz</td><td><span class="badge bleu">Administrateur</span></td><td>Tous</td><td><button class="btn btn-gris"><i data-i="pen"></i>Modifier</button></td></tr>
+      <tr><td>M. le Directeur</td><td>directeur@exemple.dz</td><td><span class="badge vert">Directeur</span></td><td>Tous</td><td><button class="btn btn-gris"><i data-i="pen"></i>Modifier</button></td></tr>
+      <tr><td>Karim B.</td><td>karim@exemple.dz</td><td><span class="badge jaune">Agent de bureau</span></td><td>MEFTAH</td><td><button class="btn btn-gris"><i data-i="pen"></i>Modifier</button></td></tr></table></div></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("utilisateurs.html");
+
+    iconify();
+  </script>
+</body>
+</html>

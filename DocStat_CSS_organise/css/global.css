@@ -1,0 +1,57 @@
+/* ===== Couleurs : changez-les ici ===== */
+:root{--bleu:#1e4db7;--jaune:#ffc20e;--fond:#f4f7fc;--texte:#14213d;--gris:#4a5b6c;--bord:#e3e9f3;}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.5;background:var(--fond);color:var(--texte)}
+h1{margin:0;font-size:28px;font-weight:800}
+h2{margin:0 0 14px;font-size:17px}
+a{color:var(--bleu)}
+.ico{display:inline-flex;vertical-align:-3px;margin-right:6px}
+
+/* ===== Barre du haut ===== */
+.entete{background:var(--bleu);border-bottom:4px solid var(--jaune);display:flex;align-items:center;gap:6px;padding:8px 24px;flex-wrap:wrap}
+.logo{color:var(--jaune);font-weight:800;font-size:18px;margin-right:16px}
+.onglet{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:10px;color:#d6e0f5;text-decoration:none}
+.onglet.actif{background:rgba(255,255,255,.18);color:#fff;font-weight:600;box-shadow:inset 0 -3px var(--jaune)}
+.profil{margin-left:auto;display:flex;align-items:center;gap:10px}
+.compte{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border-radius:28px;padding:5px 12px 5px 5px;min-height:44px}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--jaune);color:var(--texte);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.compte b{color:#fff;display:block;line-height:1.2}.compte small{color:#d6e0f5;font-size:12px}
+.sortie{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;font:600 14px Inter,Arial,sans-serif;cursor:pointer}
+
+/* ===== Page et cartes ===== */
+.page{max-width:1180px;margin:0 auto;padding:28px 32px}
+.titre{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.titre p{margin:4px 0 0;color:var(--gris)}
+.carte{background:#fff;border:1px solid var(--bord);border-radius:16px;padding:22px;margin-bottom:20px;box-shadow:0 1px 3px rgba(15,35,90,.07)}
+.ligne{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.ligne>.carte{flex:1;min-width:200px;margin:0}
+.kpi small{display:flex;align-items:center;font-weight:600;color:var(--gris)}
+.kpi b{display:block;font-size:30px;font-weight:800;margin:4px 0}
+.kpi span{color:var(--gris);font-size:13px}
+
+/* ===== Boutons, puces, formulaires ===== */
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:12px;border:1px solid #d99f00;background:var(--jaune);color:var(--texte);font:600 14px Inter,Arial,sans-serif;cursor:pointer;text-decoration:none}
+.btn-gris{background:#fff;border-color:#b9c5d2}
+.btn-rouge{background:#fff;border-color:#a8321f;color:#a8321f}
+.puce{min-height:44px;padding:0 16px;border-radius:22px;border:1px solid #b9c5d2;background:#fff;color:var(--texte);font:600 14px Inter,Arial,sans-serif;cursor:pointer}
+.puce.actif{background:var(--bleu);border-color:var(--bleu);color:#fff}
+.groupe{display:flex;gap:8px;flex-wrap:wrap}
+.filtres{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
+label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:var(--gris);flex:1;min-width:150px}
+input,select{height:44px;border:1px solid #b9c5d2;border-radius:10px;padding:0 12px;font:14px Inter,Arial,sans-serif;width:100%}
+.badge{padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;white-space:nowrap}
+.vert{background:#dff3e6;color:#17623a}.jaune{background:#fff0d6;color:#7a4b00}.rouge{background:#fde3e0;color:#8f1d12}.bleu{background:#e3ebf7;color:#17407a}
+
+/* ===== Tableaux ===== */
+.defile{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--gris);padding:10px 12px;border-bottom:2px solid var(--bord)}
+td{padding:11px 12px;border-bottom:1px solid #eef2f8}
+.section td{background:#e8eefb;font-weight:700}
+
+/* ===== Graphiques ===== */
+.graphe svg{width:100%;height:auto;display:block}
+.legende span{display:inline-flex;align-items:center;gap:8px;margin-right:18px}
+.hb{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.hb b{width:150px}.hb div{flex:1;background:#eef2f8;border-radius:6px;height:22px}.hb i{display:block;height:22px;border-radius:6px;background:var(--bleu)}.hb em{width:70px;text-align:right;font-style:normal}
+

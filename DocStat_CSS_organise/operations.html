@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opérations - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/operations.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <div class="titre"><div><h1>Recherche par opération</h1><p>Retrouver une opération dans tous les fichiers</p></div><div class="groupe"></div></div>
+    <div class="carte"><div class="filtres">
+      <label>Opération <select><option>Retrait espèces</option><option>Paiement à vue</option></select></label>
+      <label>Bureau <select><option>Tous</option></select></label>
+      <label>Du <input type="date"></label><label>Au <input type="date"></label>
+      <button class="btn"><i data-i="search"></i>Rechercher</button></div></div>
+    <div class="ligne"><div class="carte kpi"><small><i data-i="act" data-t="15"></i>Opérations</small><b>11 240</b><span></span></div><div class="carte kpi"><small><i data-i="money" data-t="15"></i>Montant total</small><b>412,6 M DA</b><span></span></div><div class="carte kpi"><small><i data-i="bld" data-t="15"></i>Bureaux concernés</small><b>100</b><span></span></div></div>
+    <div class="carte"><div class="defile"><table><tr><th>Bureau</th><th>Jours actifs</th><th>Opérations</th><th>Montant (DA)</th><th>Moyenne / jour</th></tr>
+      <tr><td>BLIDA-RP</td><td>22</td><td>968</td><td>36 400 000,00</td><td>44</td></tr>
+      <tr><td>BOUFARIK-RP</td><td>22</td><td>871</td><td>31 250 000,00</td><td>40</td></tr>
+      <tr><td>MEFTAH</td><td>21</td><td>790</td><td>28 900 000,00</td><td>38</td></tr></table></div></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("operations.html");
+
+    iconify();
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fichiers - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/fichiers.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <div class="titre"><div><h1>Fichiers</h1><p>Rechercher par nom, bureau et date</p></div><div class="groupe"></div></div>
+    <div class="carte"><div class="filtres">
+      <label>Nom du fichier <input id="nomf" placeholder="ex : 09100"></label>
+      <label>Bureau <select id="bureau"></select></label>
+      <label>Du <input id="du" type="date"></label>
+      <label>Au <input id="au" type="date"></label>
+      <button class="btn" onclick="afficherFichiers()"><i data-i="search"></i>Rechercher</button>
+    </div></div>
+    <div class="carte"><p id="nb" style="color:#4a5b6c"></p><div class="defile"><table>
+      <thead><tr><th>Nom du fichier</th><th>Bureau</th><th>Journée comptable</th><th>Actions</th></tr></thead><tbody id="corps"></tbody></table></div></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("fichiers.html");
+    remplirBureaux();
+    afficherFichiers();
+    iconify();
+  </script>
+</body>
+</html>

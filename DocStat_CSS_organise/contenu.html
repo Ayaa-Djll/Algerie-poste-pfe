@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contenu d'un fichier - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contenu.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <p><a href="fichiers.html">Fichiers</a> / 09100_2026-11-13.xlsx</p>
+    <div class="titre"><div><h1>BLIDA-RP, journée du 13/11/2026</h1><p>Contenu du fichier Excel</p></div><div class="groupe"><button class="btn btn-gris"><i data-i="down"></i>Télécharger l'Excel</button></div></div>
+    <div class="carte"><div class="filtres">
+      <label>Rechercher une opération <input id="rech" placeholder="ex : retrait" onkeyup="afficherOperations()"></label>
+      <label style="flex-direction:row;align-items:center;gap:8px;font-size:14px"><input id="zero" type="checkbox" checked onchange="afficherOperations()" style="width:auto;height:auto"> Masquer les opérations à zéro</label>
+    </div></div>
+    <div class="carte"><div class="defile"><table><thead><tr><th>Opération</th><th>Nombre</th><th>Montant (DA)</th></tr></thead><tbody id="corps"></tbody></table></div></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("fichiers.html");
+    afficherOperations();
+    iconify();
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Statistiques - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/statistiques.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <div class="titre"><div><h1>Statistiques et comparaison</h1><p>Choisissez la période et 1 à 4 bureaux</p></div><div class="groupe"><button class="btn btn-gris"><i data-i="down"></i>Exporter en Excel</button></div></div>
+    <div class="carte">
+      <div class="filtres">
+        <div><small>Période</small><div class="groupe"><button class="puce actif" onclick="activerPuce(this)">7 jours</button><button class="puce" onclick="activerPuce(this)">30 jours</button><button class="puce" onclick="activerPuce(this)">Ce mois</button></div></div>
+        <div><small>Afficher par</small><div class="groupe"><button class="puce actif" onclick="activerPuce(this)">Jour</button><button class="puce" onclick="activerPuce(this)">Semaine</button><button class="puce" onclick="activerPuce(this)">Mois</button></div></div>
+        <label>Indicateur <select><option>Nombre d'opérations</option><option>Montant</option></select></label>
+      </div>
+      <div class="groupe" style="margin-top:14px"><span class="puce actif">BLIDA-RP ×</span><span class="puce actif" style="background:#b4530a;border-color:#b4530a">BOUFARIK-RP ×</span><span class="puce actif" style="background:#2e7d4f;border-color:#2e7d4f">MEFTAH ×</span><button class="puce"><i data-i="plus"></i>Ajouter un bureau</button></div>
+    </div>
+    <div class="carte"><div class="legende" style="margin-bottom:10px"><span><svg width="30" height="10"><line x1="0" x2="30" y1="5" y2="5" stroke="#1e4db7" stroke-width="3" stroke-dasharray=""/></svg>BLIDA-RP</span><span><svg width="30" height="10"><line x1="0" x2="30" y1="5" y2="5" stroke="#b4530a" stroke-width="3" stroke-dasharray="8 4"/></svg>BOUFARIK-RP</span><span><svg width="30" height="10"><line x1="0" x2="30" y1="5" y2="5" stroke="#2e7d4f" stroke-width="3" stroke-dasharray="2 4"/></svg>MEFTAH</span></div><div class="graphe" id="g2"></div></div>
+    <div class="carte"><h2>Détail par bureau</h2><div class="defile"><table>
+      <tr><th>Bureau</th><th>Opérations</th><th>Montant (DA)</th><th>Moyenne / jour</th><th>Meilleur jour</th><th>Écart à la moyenne</th></tr>
+      <tr><td>BLIDA-RP</td><td>5 840</td><td>412 600 000</td><td>834</td><td>940</td><td><span class="badge vert">+16 %</span></td></tr>
+      <tr><td>BOUFARIK-RP</td><td>5 110</td><td>351 200 000</td><td>730</td><td>790</td><td><span class="badge bleu">-2 %</span></td></tr>
+      <tr><td>MEFTAH</td><td>4 480</td><td>296 800 000</td><td>640</td><td>700</td><td><span class="badge rouge">-14 %</span></td></tr>
+    </table></div></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("statistiques.html");
+    graphique("g2", jours, [
+      { valeurs: [820,860,790,910,880,840,940], couleur: "#1e4db7" },
+      { valeurs: [700,720,690,760,740,710,790], couleur: "#b4530a", tirets: "8 4" },
+      { valeurs: [610,640,600,670,650,620,700], couleur: "#2e7d4f", tirets: "2 4" }
+    ], 1000);
+    iconify();
+  </script>
+</body>
+</html>

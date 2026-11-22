@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Import - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <div class="titre"><div><h1>Import des fichiers</h1><p>Un fichier = un bureau + une journée comptable</p></div><div class="groupe"></div></div>
+    <div class="carte"><div style="border:2px dashed #8fa3b8;border-radius:14px;padding:34px;text-align:center;background:#f8fafd">
+      <i data-i="up" data-t="34"></i><div style="font-weight:700;font-size:16px;margin:8px 0 4px">Glissez les fichiers Excel ici</div>
+      <div style="color:#4a5b6c;margin-bottom:14px">.xlsx, plusieurs fichiers à la fois</div><button class="btn btn-gris"><i data-i="file"></i>Parcourir les fichiers</button></div></div>
+    <div class="carte"><h2>Fichiers à importer (3)</h2><div class="defile"><table>
+      <tr><th>Fichier</th><th>Bureau</th><th>Journée comptable</th><th>Statut</th><th>Action</th></tr>
+      <tr><td>09100_2026-11-13.xlsx</td><td>BLIDA-RP</td><td>13/11/2026</td><td><span class="badge vert">Prêt</span></td><td></td></tr>
+      <tr><td>09102_2026-11-10.xlsx</td><td>MEFTAH</td><td>10/11/2026</td><td><span class="badge jaune">Date différente d'aujourd'hui</span></td><td><button class="btn btn-gris"><i data-i="check"></i>Confirmer cette date</button></td></tr>
+      <tr><td>09999_2026-11-13.xlsx</td><td>Inconnu</td><td>13/11/2026</td><td><span class="badge rouge">Bureau inconnu</span></td><td><button class="btn btn-rouge"><i data-i="x"></i>Retirer</button></td></tr>
+    </table></div>
+    <div class="groupe" style="justify-content:flex-end;margin-top:16px"><button class="btn btn-gris"><i data-i="trash"></i>Tout effacer</button><button class="btn "><i data-i="check"></i>Valider et importer</button></div></div>
+    <div class="carte"><h2>Résultat du dernier import</h2><p><span class="badge vert">98 fichiers importés</span> <span class="badge jaune">5 à vérifier</span> <span class="badge rouge">2 refusés</span></p>
+      <div class="defile"><table><tr><th>Fichier</th><th>Problème</th><th>Détail</th></tr>
+      <tr><td>09012_2026-11-12.xlsx</td><td><span class="badge bleu">Doublon</span></td><td>Journée déjà importée</td></tr>
+      <tr><td>09077_2026-11-12.xlsx</td><td><span class="badge rouge">Bureau inconnu</span></td><td>Code absent de la liste</td></tr></table></div></div>
+    <div class="carte"><h2>Historique des imports</h2><div class="defile"><table>
+      <tr><th>Fichier</th><th>Bureau</th><th>Journée</th><th>Statut</th><th>Graphiques</th></tr>
+      <tr><td>09100_2026-11-13.xlsx</td><td>BLIDA-RP</td><td>13/11/2026</td><td><span class="badge vert">Jour J</span></td><td><a class="btn btn-gris" href="statistiques.html"><i data-i="bar"></i>Voir les graphiques</a></td></tr>
+      <tr><td>09102_2026-11-10.xlsx</td><td>MEFTAH</td><td>10/11/2026</td><td><span class="badge jaune">Rattrapage</span></td><td><a class="btn btn-gris" href="statistiques.html"><i data-i="bar"></i>Voir les graphiques</a></td></tr>
+    </table></div></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("import.html");
+
+    iconify();
+  </script>
+</body>
+</html>

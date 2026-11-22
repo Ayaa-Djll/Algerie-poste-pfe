@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bureaux - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/bureaux.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <div class="titre"><div><h1>Bureaux</h1><p>Gérer les bureaux de poste</p></div><div class="groupe"></div></div>
+    <div class="carte"><h2>Nouveau bureau</h2><div class="filtres">
+      <label>Code postal <input id="cp"></label><label>Code comptable <input id="code"></label><label>Nom du bureau <input id="nom"></label>
+      <button class="btn" onclick="ajouterBureau()"><i data-i="plus"></i>Ajouter</button></div></div>
+    <div class="carte"><label>Rechercher <input id="recherche" placeholder="nom, code postal ou code comptable" onkeyup="afficherBureaux()"></label><br>
+      <div class="defile"><table><thead><tr><th>Code postal</th><th>Code comptable</th><th>Nom</th><th>Wilaya</th><th>Statut</th><th>Actions</th></tr></thead><tbody id="corps"></tbody></table></div></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("bureaux.html");
+    afficherBureaux();
+    iconify();
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tableau de bord - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <div class="titre"><div><h1>Tableau de bord</h1><p>Wilaya de Blida, journée du 13/11/2026</p></div><div class="groupe"><button class="puce actif" onclick="activerPuce(this)">7 jours</button><button class="puce" onclick="activerPuce(this)">30 jours</button><button class="puce" onclick="activerPuce(this)">Ce mois</button></div></div>
+    <div class="ligne">
+      <div class="carte kpi"><small><i data-i="bld" data-t="15"></i>Bureaux actifs</small><b>100</b><span>tous les bureaux</span></div>
+      <div class="carte kpi"><small><i data-i="fchk" data-t="15"></i>Fichiers reçus (jour J)</small><b>94 / 100</b><span>94 %</span></div>
+      <div class="carte kpi"><small><i data-i="act" data-t="15"></i>Opérations</small><b>68 420</b><span>+6,4 % vs semaine précédente</span></div>
+      <div class="carte kpi"><small><i data-i="money" data-t="15"></i>Montant total</small><b>4,82 Md DA</b><span>tous les bureaux</span></div>
+      <div class="carte kpi"><small><i data-i="clock" data-t="15"></i>Retards à rattraper</small><b>6</b><span>fichiers anciens</span></div>
+    </div>
+    <div class="ligne">
+      <div class="carte" style="flex:2;min-width:420px"><h2>Opérations par jour (en milliers)</h2><div class="graphe" id="g1"></div></div>
+      <div class="carte"><h2>Alertes</h2>
+        <p><span class="badge jaune">6 fichiers</span> à rattraper</p>
+        <p><span class="badge rouge">3 bureaux</span> sans fichier depuis 3 jours</p>
+        <p><span class="badge bleu">5 doublons</span> détectés</p>
+        <a class="btn btn-gris" href="qualite.html"><i data-i="shield"></i>Voir la qualité</a></div>
+    </div>
+    <div class="carte"><h2>Classement des bureaux (opérations, 7 jours)</h2>
+      <div class="hb"><b>BLIDA-RP</b><div><i style="width:100%"></i></div><em>19 800</em></div>
+      <div class="hb"><b>BOUFARIK-RP</b><div><i style="width:94%"></i></div><em>18 540</em></div>
+      <div class="hb"><b>MEFTAH</b><div><i style="width:91%"></i></div><em>17 980</em></div>
+      <div class="hb"><b>CHIFFA</b><div><i style="width:16%;background:#b4530a"></i></div><em>3 100</em></div>
+    </div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("dashboard.html");
+    graphique("g1", jours, [{ valeurs: [61,64,59,66,63,70,68], couleur: "#1e4db7" }], 80);
+    iconify();
+  </script>
+</body>
+</html>

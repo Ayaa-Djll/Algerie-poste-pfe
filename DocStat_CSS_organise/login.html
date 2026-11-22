@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connexion - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="page-connexion">
+  <main class="boite">
+    <img src="logo.png" alt="Algérie Poste - بريد الجزائر" class="logo-ap">
+    <p class="soustitre">Statistiques des bureaux de poste</p>
+    <form onsubmit="seConnecter(); return false;">
+      <div class="erreur" id="erreur">Nom d'utilisateur ou mot de passe incorrect.</div>
+      <label>Nom utilisateur <input id="utilisateur" type="text" value="admin" autocomplete="username"></label>
+      <label>Mot de passe <input id="mdp" type="password" value="admin123" autocomplete="current-password"></label>
+      <button class="btn btn-large" type="submit"><i data-i="inn"></i>Se connecter</button>
+      <a href="#" class="oublie" onclick="alert('Contactez l\'administrateur pour réinitialiser votre mot de passe.'); return false;">Mot de passe oublié ?</a>
+    </form>
+  </main>
+  <script src="app.js"></script>
+  <script>iconify();</script>
+</body>
+</html>

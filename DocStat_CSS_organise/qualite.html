@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qualité - DocStat</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/qualite.css">
+</head>
+<body>
+  <div id="entete"></div>
+  <div class="page">
+    <div class="titre"><div><h1>Qualité des données</h1><p>Jours manquants, doublons et fichiers refusés</p></div><div class="groupe"></div></div>
+    <div class="ligne"><div class="carte kpi"><small><i data-i="calx" data-t="15"></i>Jours manquants</small><b>41</b><span>à rattraper</span></div><div class="carte kpi"><small><i data-i="copy" data-t="15"></i>Doublons</small><b>5</b><span></span></div><div class="carte kpi"><small><i data-i="ban" data-t="15"></i>Fichiers refusés</small><b>2</b><span></span></div><div class="carte kpi"><small><i data-i="pct" data-t="15"></i>Complétude</small><b>97 %</b><span></span></div></div>
+    <div class="carte"><h2>Jours sans fichier</h2><div class="defile"><table><tr><th>Bureau</th><th>Journée</th><th>Statut</th><th>Action</th></tr>
+      <tr><td>MEFTAH</td><td>08/11/2026</td><td><span class="badge jaune">À rattraper</span></td><td><a class="btn btn-gris" href="import.html"><i data-i="up"></i>Importer le fichier</a></td></tr>
+      <tr><td>MEFTAH</td><td>09/11/2026</td><td><span class="badge jaune">À rattraper</span></td><td><a class="btn btn-gris" href="import.html"><i data-i="up"></i>Importer le fichier</a></td></tr>
+      <tr><td>BOUGARA</td><td>10/11/2026</td><td><span class="badge bleu">Jour férié</span></td><td></td></tr></table></div></div>
+    <div class="carte"><h2>Anomalies d'import</h2><div class="defile"><table><tr><th>Fichier</th><th>Type</th><th>Détail</th></tr>
+      <tr><td>09012_2026-11-12.xlsx</td><td><span class="badge bleu">Doublon</span></td><td>Journée déjà importée</td></tr>
+      <tr><td>09077_2026-11-12.xlsx</td><td><span class="badge rouge">Bureau inconnu</span></td><td>Code absent de la liste</td></tr></table></div></div>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    afficherEntete("qualite.html");
+
+    iconify();
+  </script>
+</body>
+</html>
